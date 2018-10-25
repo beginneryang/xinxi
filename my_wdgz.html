@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>广场</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body class="index square">
+<!-- 顶部 -->
+<!-- 顶部-->
+	<div class="weui-flex pad_rl15 header bg_gg_l">
+	  <div class="weui-flex__item"><a class="fs14 col_fff" href="javascript:history.go(-1)">&lt;返回</a></div>
+	  <div class="weui-flex__item fs18 col_fff txt_cen">我的关注</div>
+	  <div class="weui-flex__item fs0 col_fff"></div>
+	</div>
+  <div class="mt40"></div>
+<!-- 内容 -->
+	<div class="content mb60">
+		<div class="con_item con_item_act">
+				<div class="weui-panel_list">
+					  <!-- 调取首页新闻和广场页项目内容-->
+						<div class="weui-panel weui-panel_act mt0">
+						  <div class="weui-panel__bd">
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="1">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title  mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow label_act">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="2">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="1">
+						      <div class="weui-media-box__hd">
+						        <a href="new_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="new_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="mb10"><a href="new_xq.html" class="col_666 fs14">阅读量：<span>111222</span></a></p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl">今天</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl">问答</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+				</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+	<script>
+      $(function(){
+		    $('.label_act.follow').text('已关注');
+		  });
+      $('.label_div').on('click', '.follow', function() {
+      	  if($(this).text() == '关注'){
+				      	// $(this).addClass('label_act').text('已关注');
+				      	var id =$(this).parents('.weui-media-box').attr('data-id');
+				      	console.log(id);
+					      $.ajax({
+				          type:'GET',
+				          url:'index.html',
+				          data:{ 
+				            id:id
+				          },
+				          success:function(data){      
+				          	$(this).addClass('label_act').text('已关注');
+				            $.toast("关注成功", "text");
+				          },
+				          error:function(){ 
+				            alert("请求失败")
+				          }
+				        });
+				  }else{
+				  	var id =$(this).parents('.weui-media-box').attr('data-id');
+				      	console.log(id);
+					      $.ajax({
+				          type:'GET',
+				          url:'index.html',
+				          data:{ 
+				            id:id
+				          },
+				          success:function(data){      
+				          	$(this).removeClass('label_act').text('关注');
+				            $.toast("取消关注", "text");
+				          },
+				          error:function(){ 
+				            alert("请求失败")
+				          }
+				      });
+				  }
+      });
+  </script>
+</body>
+</html>

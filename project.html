@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目备忘录</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/weui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body class="index body_bg project">
+<!-- 顶部 -->
+<form method="GET" action="square.html" name="saerch_form">
+	<header class="bg_gg_l">
+		<div class="weui-flex pad_rl15">
+		  <div class="weui-flex__item bg_fff search_header pad_rl15 fs0 clearfix">
+		  		<a href="javascript:document.saerch_form.submit();" class="iconfont col_666 fs18 fw_bold submit fl">&#xe60d;</a>
+		  		<input type="search" name="search" placeholder="请输入搜索内容" class="col_333 fs16 fl">
+		  </div>
+		  <a href="javascript:document.saerch_form.submit();" class="col_fff fs18 submit ml20">搜索</a>
+		</div>
+	</header>
+</form>
+
+<!-- 内容 -->
+	<div class="content mb60 mt40">
+		<div class="con_item con_item_act">
+			  <!-- 内容切换按钮 -->
+			  <div class="but_con bg_fff clearfix">
+			  	<div class="fs0">
+				  	 <span class="fs16 col_000 txt_cen span_act">企业信息</span>
+				 	   <span class="fs16 col_000 txt_cen">土地信息</span>
+				 	   <em class="fs16 col_000 txt_cen" id="show-prompt">添加</em>
+			  	</div>
+			  </div>
+				<div class="weui-panel_list">
+						<!-- 企业内容-->
+						<div class="weui-panel weui-panel_act mt0">
+						  <div class="weui-panel__bd">
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="1">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title  mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="2">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="3">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="4">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<!-- 土地内容-->
+						<div class="weui-panel mt0">
+						  <div class="weui-panel__bd">
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="1">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title  mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow label_act">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="2">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						    <div  class="weui-media-box weui-media-box_appmsg" data-id="3">
+						      <div class="weui-media-box__hd">
+						        <a href="list_xq.html"><img class="weui-media-box__thumb" src="images/con1.jpg"></a>
+						      </div>
+						      <div class="weui-media-box__bd">
+						        <h4 class="weui-media-box__title mb12">
+						        	<a href="list_xq.html" class="fs16 col_000">北京汇云世纪网络科技有限公司</a>
+						        </h4>
+						        <p class="weui-media-box__title mb10">
+						        	<a href="list_xq.html" class="col_666 fs14 clearfix">
+						        	     <span>地域：<em>北京</em></span>
+						        	     <span>行业：<em>装备</em></span>
+						          </a>
+						        </p>
+							      <div class="label_div">
+							      	<p class="label bg_gg_l fs14 txt_cen fl"><a class="col_fff" href="###">编辑</a></p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl delete">删除</p>
+							      	<p class="label bg_gg_l fs14 txt_cen col_fff fl follow label_act">关注</p>
+							      </div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+				</div>
+		</div>
+	</div>
+
+<!-- 发布内容按钮 -->
+ <a href="project_fb.html" class="location_sub col_fff iconfont bg_gg_l txt_cen fs22">&#xe63b;</a>
+
+<!-- 底部-->
+  <div class="weui-tabbar bg_fff">
+    <a href="index.html" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon iconfont fs22 col_999">&#xe607;</div>
+      <p class="weui-tabbar__label fs16 col_999">首页</p>
+    </a>
+    <a href="square.html" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon iconfont fs22 col_999" style="line-height:30px;">&#xe606;</div>
+      <p class="weui-tabbar__label fs16 col_999">广场</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon iconfont fs22 col_gg_l" style="line-height:30px;">&#xe630;</div>
+      <p class="weui-tabbar__label fs16 col_gg_l">项目备忘录</p>
+    </a>
+    <a href="my.html" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon iconfont fs22 col_999">&#xe604;</div>
+      <p class="weui-tabbar__label fs16 col_999">我的</p>
+    </a>
+  </div>
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+      $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000,
+      });
+      $('.submit').on('click', function() {
+      	if($('input[type="search"]').val() == ''){
+      	  alert('请输入搜索内容！');
+      	  $('input[type="search"]').focus();
+      	  return false;
+      	} 
+      });
+      $('.but_con').on('click', 'span', function() {
+      	 $(this).addClass('span_act').siblings().removeClass('span_act');
+      	 $(this).parents('.but_con').siblings('.weui-panel_list').children('.weui-panel').eq($(this).index()).show().siblings('.weui-panel').hide();
+      });
+      $(document).on("click", "#show-prompt", function() {
+        $.prompt({
+          text: "名字不能超过6个字符，不得出现不和谐文字",
+          title: "输入栏目名称",
+          onOK: function(text) {
+            // $('.but_con>div>em').before("<span class='fs16 col_000 txt_cen'>"+text+"</span>");
+						// $('.weui-panel_list').append("<div class='weui-panel mt0'><p class='fs16 col_000 txt_cen mt20 mb12'>暂无数据...</p></div>");
+            $.ajax({
+						          type:'GET',
+						          url:'project.html',
+						          data:{
+						            name:text
+						          },
+						          success:function(){      
+						            $.alert("栏目名称是:"+text, "栏目添加成功");
+						            $('.but_con>div>em').before("<span class='fs16 col_000 txt_cen'>"+text+"</span>");
+						          	$('.weui-panel_list').append("<div class='weui-panel mt0'><p class='fs16 col_000 txt_cen mt20 mb12'>暂无数据...</p></div>");
+						          },
+						          error:function(){ 
+						            alert("请求失败")
+						          }
+						 })
+          },
+          onCancel: function() {
+            console.log("取消了");
+          },
+          input:""
+
+        });
+      });
+	    $(function(){
+			   $('.label_act.follow').text('已关注');
+		  });
+      $('.label_div').on('click', '.follow', function() {
+      	  if($(this).text() == '关注'){
+				      	// $(this).addClass('label_act').text('已关注');
+				      	var id =$(this).parents('.weui-media-box').attr('data-id');
+				      	console.log(id);
+					      $.ajax({
+				          type:'GET',
+				          url:'index.html',
+				          data:{ 
+				            id:id
+				          },
+				          success:function(data){      
+				          	$(this).addClass('label_act').text('已关注');
+				            $.toast("关注成功", "text");
+				          },
+				          error:function(){ 
+				            alert("请求失败")
+				          }
+				        });
+				  }else{
+				  	var id =$(this).parents('.weui-media-box').attr('data-id');
+				      	console.log(id);
+					      $.ajax({
+				          type:'GET',
+				          url:'index.html',
+				          data:{ 
+				            id:id
+				          },
+				          success:function(data){      
+				          	$(this).removeClass('label_act').text('关注');
+				            $.toast("取消关注", "text");
+				          },
+				          error:function(){ 
+				            alert("请求失败")
+				          }
+				      });
+				  }
+      })
+      .on('click', '.delete', function() {
+				      	var id =$(this).parents('.weui-media-box').attr('data-id');
+				      	console.log(id);
+					      $.ajax({
+				          type:'GET',
+				          url:'index.html',
+				          data:{ 
+				            id:id
+				          },
+				          success:function(data){      
+				            $.toast("删除成功", "text");
+				          },
+				          error:function(){ 
+				            alert("请求失败")
+				          }
+				        });
+      });
+  </script>
+</body>
+</html>

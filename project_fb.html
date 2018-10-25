@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目发布</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body class="project_fb index">
+<!-- 顶部-->
+	<div class="weui-flex pad_rl15 header bg_gg_l">
+	  <div class="weui-flex__item"><a class="fs16 col_fff" href="javascript:history.go(-1)">&lt;返回</a></div>
+	  <div class="weui-flex__item fs18 col_fff txt_cen">项目发布</div>
+	  <div class="weui-flex__item fs0 col_fff"></div>
+	</div>
+
+
+<!-- 内容-基本信息  -->
+	<div class="con mt40 pd_t20 body_bg">
+	  <form method="GET" action="project_fb.html">
+				<div class="weui-cells mt0 body_bg weui-cell_bor-t weui-cells_bor-b">
+				  <div class="weui-cell weui-cell_bor-t mb3 bg_fff">
+				  	<div class="weui-cell__hd fs16 col_000">项目名称</div>
+				    <div class="weui-cell__bd inp_w1 ml20"><input class="fs16 col_333" type="text" name="name" placeholder="请输入项目名称"></div>
+				  </div>
+				  <div class="weui-cell weui-cell_bor-t mb3 bg_fff">
+		        <div class="weui-cell__hd fs16 col_000s">所在位置</div>
+		        <div class="weui-cell__bd inp_w1 ml20">
+		          <input class="fs16 col_333" id="position" type="text" name="address" placeholder="请输入所在位置" readonly="" data-code="" data-codes="">
+		        </div>
+		      </div>
+				  <div class="weui-cell weui-cell_bor-t mb3 bg_fff">
+				  	<div class="weui-cell__hd fs16 col_000">所属行业</div>
+				    <div class="weui-cell__bd inp_w1 ml20">
+				    	<input class="fs16 col_333" type="text" name="industry" id='picker' placeholder="请输入所属行业">
+				    </div>
+				  </div>
+				</div>
+				<div class="weui-cells mt0 mb3 weui-cell_bor-t weui-cells_bor-b">
+					<p class=" fs16 pad_tb15 col_000">项目需求</p>
+				  <div class="weui-cell weui-cell_bor-t">
+				    <textarea style="resize:none;"  placeholder="请输入您的项目需求..." name="remark"></textarea>
+				  </div>
+				</div>
+				<div class="weui-cells mt0 body_bg weui-cell_bor-t weui-cells_bor-b">
+		        <div class="weui-cell weui-cell_bor-t upload mb3 bg_fff">
+		        	<div class="weui-cell__hd fs16 col_000">封面图片</div>
+		          <div class="weui-cell__bd ml20">  
+		           	<span class="iconfont txt_cen col_666">&#xe63b;</span>
+		            <input  type="file" accept="image/*" multiple="" id="uploaderInput" name="picture">
+		            <span class="upload_img"><img src="" alt="" id='photo'></span>
+		          </div>
+		        </div>
+					  <div class="weui-cell weui-cell_bor-t mb3 bg_fff">
+					  	<div class="weui-cell__hd fs16 col_000">发布状态</div>
+					    <div class="weui-cell__bd fs16 col_666 ml20">
+					    	<input type="radio" value="0" name="state" class="col_666" checked>&nbsp;&nbsp;隐私
+					    	<input type="radio" value="1" name="state" class="col_666 ml20">&nbsp;&nbsp;广场
+					    </div>
+					  </div>
+				</div>
+				<div class="weui-flex but_switch bg_fff">
+		   		<input type="reset" class="weui-flex__item txt_cen fs16 col_gg_l" value="取消发布">
+			    <input type="submit" class="weui-flex__item txt_cen fs16 act" value="点击发布">
+			  </div>
+		</form>
+	</div>
+
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+	<script src="js/city-picker.min.js"></script>
+	<script>
+			$("#position").cityPicker({
+        title: "请选择所在位置",
+      });
+      $("#picker").picker({
+			  title: "请选择所属行业",
+			  cols: [
+			    {
+			      textAlign: 'center',
+			      values: ['金融','服务', '房产', '教育', '科技', '电商']
+			    }
+			  ]
+			});
+			$('input[type="submit"]').on('click', function() {
+				  if($('input[name="name"]').val() == ""){
+				  	  alert('请输入项目名称！')
+              return false;
+				  }
+				  if( $('input[name="address"]').val() == ""){
+				  	  alert('请输入所在位置！')
+              return false;
+				  }
+				  if($('input[name="industry"]').val() == ""){
+				  	  alert('请输入所属行业！')
+              return false;
+				  }
+				  if($('textarea[name="remark"]').val() == ""){
+				  	  alert('请输入您的项目需求！')
+              return false;
+				  }
+				  if($('input[name="picture"]').val() == ""){
+				  	  alert('请上传封面图片！')
+              return false;
+				  }
+				 
+				  
+				  
+				  
+			});
+	</script>
+	<script>
+      var photo = document.getElementById("photo");
+      var chooseFile = document.getElementById("uploaderInput");
+      var inp_box =document.getElementById('inp_box');
+
+      chooseFile.onchange = function(){
+
+          var file = this.files[0];
+          if (window.FileReader) {
+              var reader = new FileReader();
+              reader.readAsDataURL(file);
+              reader.onloadend = function (e) {
+                  photo.setAttribute("src",e.target.result);
+                  inp_box.style.display='none';
+              };
+              
+          }
+      };
+  </script>
+</body>
+</html>

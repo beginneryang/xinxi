@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body class="my_sz_grxx index">
+<!-- 顶部-->
+	<div class="weui-flex pad_rl15 header bg_gg_l">
+	  <a class="fs14 col_fff" href="javascript:history.go(-1)">&lt;返回</a>
+	  <div class="weui-flex__item fs18 col_fff txt_cen">修改登录密码</div>
+	  <a href="javascript:;" class="fs14 col_tran">完成&gt;</a><!--没用占位置的-->
+	</div>
+ 
+<!-- 列表-->
+<form action="my_sz_xgmm.html" method="GET">
+	<div class="weui-cells body_bg mt40 weui_lists mt60 pd_t20 weui-cells_bor-b">
+		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  	<div class="weui-cell__hd fs16 col_000 ">旧密码:</div>
+		    <div class="weui-cell__bd ml20 inp_w1">
+		    	<input class="fs16 col_333" type="password" name="used_pass" value="" placeholder="填写原密码" autofocus>
+		    </div>
+		  </div>
+		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  	<div class="weui-cell__hd fs16 col_000 ">新密码:</div>
+		    <div class="weui-cell__bd ml20 inp_w1">
+		      <input class="fs16 col_333" type="password" name="new_pass" value=""  placeholder="填写新密码">
+		    </div>
+		  </div>
+		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  	<div class="weui-cell__hd fs16 col_000 ">确认密码:</div>
+		    <div class="weui-cell__bd ml20 inp_w1">
+		      <input class="fs16 col_333" type="password" name="new_pass" value="" placeholder="再次填写确认">
+		    </div>
+		  </div>
+	</div>
+	<footer class="but"><input type="submit" class="txt_cen fs18 bg_gg_l col_fff" value="提交"></footer>
+</form>
+
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery-weui.min.js"></script>
+</body>
+</html>
