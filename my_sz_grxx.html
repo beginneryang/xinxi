@@ -12,7 +12,7 @@
 <body class="my_sz_grxx index">
 <!-- 顶部-->
 	<div class="weui-flex pad_rl15 header bg_gg_l">
-	  <a class="fs14 col_fff" href="javascript:history.go(-1)">&lt;返回</a>
+	  <a class="fs16 col_fff iconfont" href="javascript:history.go(-1)">&#xe645;&nbsp;返回</a>
 	  <div class="weui-flex__item fs18 col_fff txt_cen">修改个人信息</div>
 	  <a href="javascript:;" class="fs14 col_tran">完成&gt;</a><!--没用占位置的-->
 	</div>
@@ -20,49 +20,56 @@
 <!-- 列表-->
 <form action="my_sz_xrxx.html" method="GET">
 	<div class="weui-cells body_bg mt40 weui_lists mt60 pd_t20 weui-cells_bor-b">
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3 upload">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3 upload">
 		  	<div class="weui-cell__hd fs16 col_000 ">头像:</div>
-		    <div class="weui-cell__bd ml20 inp_w1">
+		    <div class="weui-cell__bd inp_w1">
 		    	<input  type="file" accept="image/*" multiple="" id="uploaderInput" name="picture">
 		      <span class="upload_img"><img src="images/con1.jpg" alt="" id='photo'></span>
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
 		  	<div class="weui-cell__hd fs16 col_000 ">用户名:</div>
-		    <div class="weui-cell__bd ml20 inp_w1">
-		    	<input class="fs16 col_333"  type="text" value="刘晶晶" name="name">
+		    <div class="weui-cell__bd inp_w1 txt">
+		    	<input class="fs16 col_333 txt_right"  type="text" value="刘晶晶" name="name">
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
 		  	<div class="weui-cell__hd fs16 col_000 ">年龄:</div>
-		    <div class="weui-cell__bd ml20 inp_w1">
-		    	<input class="fs16 col_333"  type="text" value="22岁" name="age">
+		    <div class="weui-cell__bd inp_w1">
+		    	<input class="fs16 col_333 txt_right"  type="text" value="22岁" name="age">
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
 		  	<div class="weui-cell__hd fs16 col_000 ">性别:</div>
-		    <div class="weui-cell__bd ml20 fs16">
+		    <div class="weui-cell__bd fs16 txt_right">
 		      	<input class="fs16 col_333"  type="radio" value="0" name="sex" checked>&nbsp;&nbsp;女
 		      	<input class="fs16 col_333 ml20"  type="radio" value="1" name="sex">&nbsp;&nbsp;男
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
 		  	<div class="weui-cell__hd fs16 col_000 ">手机号:</div>
 		    <div class="weui-cell__bd ml20 inp_w1">
-		    	<input class="fs16 col_333" type="number" pattern="[0-9]*" value="13100005595" name="phone">
+		    	<input class="fs16 col_333 txt_right" type="number" pattern="[0-9]*" value="13100005595" name="phone">
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
 		  	<div class="weui-cell__hd fs16 col_000">我的地址:</div>
 		    <div class="weui-cell__bd ml20 inp_w1">
-		    	<input class="fs16 col_333"  type="text" name="address" value="北京市昌平区珠江摩尔">
+		    	<input class="fs16 col_333 txt_right"  type="text" name="address" value="北京市昌平区珠江摩尔">
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
-		  <div class="weui-cell weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
+		  <div class="weui-cell weui-cell_access weuis-cell_bor-b weui-cell_bor-t bg_fff mb3">
 		  	<div class="weui-cell__hd fs16 col_000">个性签名:</div>
 		    <div class="weui-cell__bd ml20 inp_w1">
-		      <input class="fs16 col_333" type="text" name="auto" value="细节决定成败！">
+		      <input class="fs16 col_333 txt_right" type="text" name="auto" value="细节决定成败！">
 		    </div>
+		    <div class="weui-cell__ft"></div>
 		  </div>
 	</div>
 
